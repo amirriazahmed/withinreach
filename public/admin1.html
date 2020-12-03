@@ -38,6 +38,16 @@
             <td>Seats: <a id="seats">0</a></td>
           </tr>
         </table>
+
+        <br>
+        <table>
+          <tr>
+            
+            <th><button id="submit" type="button" onClick="onClick2()"> Remove Seats</button></th>
+            </tr>
+  
+          </table>
+
       </div>
     </div>
   <script>
@@ -60,6 +70,12 @@
         seats += 1 ;
         document.getElementById("seats").innerHTML = seats;
       }; 
+
+      function onClick2() {
+        seats -= 1 ;
+        document.getElementById("seats").innerHTML = seats;
+        submitSeats()
+      };
 
       const button = document.getElementById('submit');
 
