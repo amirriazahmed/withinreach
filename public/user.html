@@ -4,7 +4,7 @@
 <title>Within Reach - User Panel</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="UTF-8" />
-<meta http-equiv="refresh" content="3"/>
+<!-- <meta http-equiv="refresh" content="3"/>  -->
 <link rel="stylesheet" href="w3.css" >
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
 </head>
@@ -105,7 +105,7 @@
 
     <script>
 
-    getData();
+    // getData();
     async function getData() {
       const response = await fetch('/api');
       const data = await response.json();
@@ -163,7 +163,9 @@
       console.log(data);
     } 
 
-    getData2();
+    setInterval(getData, 2000);
+
+    // getData2();
     async function getData2() {
       /* const response = (await fetch('/api2'), 5); */
       const response = await fetch('/api2');
@@ -224,8 +226,9 @@
       console.log(data);
      
     } 
+  setInterval(getData2, 2000);
 
-    function myFunction() {
+  function myFunction() {
   var myWindow = window.open("https://maps.google.ca", "", "width=600,height=300");
 }
    
